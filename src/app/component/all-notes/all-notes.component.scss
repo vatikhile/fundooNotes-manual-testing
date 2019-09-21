@@ -1,11 +1,10 @@
 
 .Card{
     display: flex;
-     background-color: white;
+    background-color: white;
 
 }
 .mat-card{
-
     border-radius: 12px;
 }
 .mat-card:hover{
@@ -43,13 +42,7 @@
 .img{
     width: 12px;
 }
-// .pin{
-//     margin-left: 75%;
-//     margin-top: -13%;
-// position: absolute;
-   
 
-// }
 .mat-icon-button{
     outline: none;
     background-color:transparent;
@@ -63,12 +56,7 @@
     {
         visibility: hidden;
     }
-// .pin{
-//     color: #5f6268;
-//     // font-weight:inherit;
-//     // font-size: 20px;
-//     font-family: Arial, sans-serif;
-// }
+
 .point{
   outline: none;
   border-color: transparent;

@@ -26,7 +26,7 @@ export class CartComponent implements OnInit {
    * @purpose this method is for get all the service 
    */
   getUserService() {
-   
+
     try {
       this.http.httpGetWithoutToken('user/service').subscribe(data => {
         this.serviceArray = data['data']['data']
@@ -57,7 +57,7 @@ export class CartComponent implements OnInit {
 
       this.openDialog();
 
- 
+
     } catch (error) {
       console.log('error in ecart ', error);
 
@@ -99,9 +99,9 @@ export class CartComponent implements OnInit {
 
 
   }
-/**
-* @purpose this method is for navigate the page to login page
-*/
+  /**
+  * @purpose this method is for navigate the page to login page
+  */
   signIn() {
     try {
       localStorage.removeItem('cartId');

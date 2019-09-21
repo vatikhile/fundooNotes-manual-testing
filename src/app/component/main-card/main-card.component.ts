@@ -33,7 +33,7 @@ export class MainCardComponent implements OnInit {
     // this.spinnerService.hide();
        
         console.log('data after get cart detail1', data);
-        if (data['data'].length > 0) {
+        if (data['data']) {
           this.cartData = data['data'][0];
           console.log("card data",this.cartData);
           

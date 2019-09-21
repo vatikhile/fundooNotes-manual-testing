@@ -103,7 +103,7 @@
         (click)="showFirstReply=false">
         <mat-icon>expand_less</mat-icon> Hide reply
     </div>
-    <div *ngIf="showFirstReply &&  AnswerArray ?.length >0" class="answerDisplay">
+    <div *ngIf="showFirstReply &&  AnswerArray" class="answerDisplay">
         <div class="userAnswer" *ngFor="let index of  AnswerArray">
             <div *ngIf="index.parentId==parentId && index.isApproved==true" fxLayout='column'>
                 <div fxLayout='row' fxLayout.xs='column'>

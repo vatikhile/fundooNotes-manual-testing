@@ -52,7 +52,7 @@
       </div>
     </mat-card-content>
   </mat-card>
-  <div class="service" *ngIf="services.length > 0" fxLayoutGap='10%' fxFlex.lg="35" fxFlex.md="40" fxFlex.sm="90">
+  <div class="service" *ngIf="services" fxLayoutGap='10%' fxFlex.lg="35" fxFlex.md="40" fxFlex.sm="90">
 
     <div *ngFor="let index of services" class="both">
       <mat-card [ngClass]="productId==index.id ? 'selected':'notSelected' ">

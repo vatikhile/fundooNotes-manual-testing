@@ -68,7 +68,7 @@ this.getUserService();
   submit() {
     try {
       if(localStorage.getItem('cartId')!=null){
-        for (let i = 0; i < this.services.length; i++) {
+        for (let i = 0; i < 50; i++) {
           if(this.services[i].id==this.productId){
             this.addToCart(this.productId);
             this.service=this.services[i].name
@@ -86,7 +86,7 @@ this.getUserService();
           return;
         }
         else{
-          for (let i = 0; i < this.services.length; i++) {
+          for (let i = 0; i < 50; i++) {
             if(this.services[i].id==this.productId){
               this.addToCart(this.productId);
               this.service=this.services[i].name
@@ -164,7 +164,7 @@ this.getUserService();
     this.productId=item.id;
   
     
-    for (let i = 0; i < this.services.length; i++) {
+    for (let i = 0; i <50; i++) {
       if(this.services[i].id==this.productId){
         this.service=this.services[i].name
       }

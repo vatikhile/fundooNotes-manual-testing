@@ -101,7 +101,7 @@ export class QuestionAnswerComponent implements OnInit {
         if (this.AnswerArray != null)
           console.log("blank");
 
-        for (let i = 0; i < this.AnswerArray.length; i++) {
+        for (let i = 0; i < 50; i++) {
           console.log(this.AnswerArray[i].id, 'Id and parent id', this.AnswerArray[i].parentId);
         }
       },
@@ -159,7 +159,7 @@ export class QuestionAnswerComponent implements OnInit {
     this.showEditorId = false;
     this.replyModel.message = this.editorContent;
     this.replyModel.id = id;
-    if (this.editorContent.length < 30 && this.question != undefined) {
+    if (this.editorContent && this.question != undefined) {
       // this.snackbar('Not a proper Answer', '');
       this.editorContent = '';
       return;

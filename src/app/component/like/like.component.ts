@@ -1,5 +1,5 @@
-import { Component, OnInit,Input } from '@angular/core';
-import { HttpServiceService } from '../../core/service/http/http-service.service'
+import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-like',
@@ -9,11 +9,8 @@ import { HttpServiceService } from '../../core/service/http/http-service.service
 export class LikeComponent implements OnInit {
  
  
-  constructor(private http:HttpServiceService) { }
+  constructor() { }
 
   ngOnInit() {
   }
-
-
- 
 }

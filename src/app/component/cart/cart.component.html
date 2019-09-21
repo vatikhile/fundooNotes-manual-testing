@@ -4,13 +4,11 @@
     fundooNotes
   </div>
 </mat-toolbar>
-
-
 <div fxLayout="column" fxLayoutAlign="space-around center" class="mainService">
   <div class="fundooService">
   Which fundooNotes service package do you want?
   </div>
-  <div class="serviceAsk" *ngIf="serviceArray.length >0"   fxLayoutGap='10%' fxLayoutGap.xs='5%'>
+  <div class="serviceAsk" *ngIf="serviceArray"   fxLayoutGap='10%' fxLayoutGap.xs='5%'>
     <div class="wholeMatCard1" (click)="serviceOpen('Advance')">
       <div>
         <mat-card class="backMatCard1">
@@ -24,19 +22,19 @@
 
           <div fxLayout="column">
             <div class="price">
-              price: ${{serviceArray[0].price}} per month
+              price: ${{serviceArray[0]?.price}} per month
             </div>
             <div class="serviceName">
-                {{serviceArray[0].name | uppercase}}
+                {{serviceArray[0]?.name | uppercase}}
             </div>
             <div>
               <ul>
                 <li>
-                  ${{serviceArray[0].price}}/month
+                  ${{serviceArray[0]?.price}}/month
 
                 </li>
                 <li>
-                    {{serviceArray[0].description}}
+                    {{serviceArray[0]?.description}}
 
                 </li>
               </ul>
@@ -59,19 +57,19 @@
         <mat-card class="upperMatCard2">
           <div fxLayout="column">
             <div class="price">
-                price: ${{serviceArray[1].price}} per month
+                price: ${{serviceArray[1]?.price}} per month
             </div>
             <div class="serviceName">
-                {{serviceArray[1].name | uppercase}}
+                {{serviceArray[1]?.name | uppercase}}
             </div>
             <div>
               <ul>
                 <li>
-                    ${{serviceArray[1].price}}/month
+                    ${{serviceArray[1]?.price}}/month
 
                 </li>
                 <li>
-                    {{serviceArray[1].description}}
+                    {{serviceArray[1]?.description}}
 
                 </li>
               </ul>
@@ -85,7 +83,5 @@
   <div>
     <button mat-button class="signIn" (click)="signIn()"> Sign in Instead</button>
   </div>
-
 </div>
-
 </div>

@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class OrderOfPipe implements PipeTransform {
   transform(value) {
-    if (!value || !value.length) {
+    if (!value) {
       return;
     }
     return value.slice().reverse();

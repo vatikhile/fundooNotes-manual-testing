@@ -12,6 +12,7 @@ import { ResetPasswordComponent } from './component/reset-password/reset-passwor
 import { ForgotComponent } from './component/forgot/forgot.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
+import { MatDialog } from '@angular/material/dialog';
 import { RegisterComponent } from './component/register/register.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
@@ -19,6 +20,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FilterPipeModule } from 'ngx-filter-pipe';
 import { MatRadioModule } from '@angular/material/radio';
 import { HttpClientModule } from '@angular/common/http';
+import { MatSnackBar } from '@angular/material/snack-bar';
+
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -86,6 +89,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     EditNotesComponent,
     NoteSearchPipePipe,
     OrderOfPipe,
+    MatDialog,
     SearchComponent,
     ProfilePicComponent,
     ReminderComponent,
@@ -108,6 +112,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatInputModule,
     MatCardModule,
     MatFormFieldModule,
+    MatSnackBar,
     ImageCropperModule,
     MatIconModule,
     HttpClientModule,

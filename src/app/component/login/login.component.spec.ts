@@ -9,6 +9,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { MatInputModule } from '@angular/material';
+import { FormControl, Validators } from '@angular/forms';
+import { UserModel } from '../../core/model/Users/user-model'
+// import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { UserServiceService } from '../../core/service/user/user-service.service';
+import { AddNoteComponent } from '../add-note/add-note.component';
+import{HttpServiceService} from '../../core/service/http/http-service.service'
 import { MatFormField } from '@angular/material';
 // import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule, } from '@angular/platform-browser/animations';
@@ -17,7 +24,7 @@ import { By } from 'selenium-webdriver';
 import { BrowserModule } from '@angular/platform-browser';
 import { AuthGuardService } from 'src/app/core/service/auth/auth-guard.service';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-
+import{RegisterComponent} from '../../../../src/app/component/register/register.component'
 describe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
@@ -25,11 +32,11 @@ describe('LoginComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [LoginComponent],
+      declarations: [LoginComponent,UserModel,RegisterComponent,HttpServiceService,AddNoteComponent,UserServiceService],
       // FormsModule, MatButtonModule,ReactiveFormsModule, MatFormFieldModule, ,MatIconModule,HttpClientModule,
       //    MatInputModule,BrowserAnimationsModule,RouterTestingModule, RouterModule, BrowserModule
-      imports: [MatCardModule, FormsModule, MatButtonModule, ReactiveFormsModule, MatFormFieldModule, MatIconModule, HttpClientModule,
-        RouterTestingModule.withRoutes([{ path: 'login', component: LoginComponent }]), RouterModule, RouterModule, BrowserModule, MatSnackBarModule],
+      imports: [MatCardModule,MatSnackBar, MatInputModule, FormControl, Validators,FormsModule, MatFormField,MatButtonModule, ReactiveFormsModule, MatFormFieldModule, MatIconModule, HttpClientModule,
+        RouterTestingModule.withRoutes([{ path: 'login', component: LoginComponent }]), RouterModule, BrowserModule],
 
       //providers: [AuthGuardService, { provide: AuthServiceConfig, useFactory: getAuthServiceConfigs } ],
     })
